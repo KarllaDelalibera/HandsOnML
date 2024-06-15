@@ -21,10 +21,10 @@ class LinearRegression:
             for linear regression to fit the data points in x and y.
         """
 
-        m = X.shape[0]
+        n = X.shape[0]
         f_wb = self.w * X + self.b
         cost_sum = np.sum((f_wb - y) ** 2)
-        cost = (1 / (2 * m)) * cost_sum
+        cost = (1 / (2 * n)) * cost_sum
 
         return cost
 
@@ -41,11 +41,11 @@ class LinearRegression:
           dj_db (float): The gradient of b     
          """
 
-        m = X.shape[0]
+        n = X.shape[0]
         f_wb = self.w * X + self.b
         error = f_wb - y
-        dj_dw = (1 / m) * np.sum(error * X)
-        dj_db = (1 / m) * np.sum(error)
+        dj_dw = (1 / n) * np.sum(error * X)
+        dj_db = (1 / n) * np.sum(error)
 
         return dj_dw, dj_db
 
