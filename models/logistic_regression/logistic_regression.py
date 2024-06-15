@@ -10,7 +10,7 @@ def sigmoid(z):
 
 def compute_cost(X, y, w, b):
     """
-    Computes the cost function (cross rntropy) for logistic regression.
+    Computes the cost function (cross entropy) for logistic regression.
     Args:
       X (numpy.ndarray): data, m examples with n features
       y (numpy.ndarray) : target values
