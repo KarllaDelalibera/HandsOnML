@@ -90,3 +90,21 @@ def fit(X, y, learning_rate, iterations):
             J_cost_values.append(compute_cost(X, y, w, b))
     
     return w, b, J_cost_values
+
+
+def predict(X, w, b):
+    """
+    Make predictions using the fitted parameters of the model.
+    Args:
+      X (numpy.ndarray): data
+    Returns:
+      numpy.ndarray: model predictions
+    """
+
+    m = X.shape[0]
+    y_pred = np.zeros(m)
+    
+    for i in range(m):
+        z_i = np.dot(X[i], w) + b
+        y_pred[i] = sigmoid(z_i)
+    return y_pred
