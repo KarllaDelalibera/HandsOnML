@@ -10,4 +10,5 @@ Este projeto é dedicado a implementar alguns algoritmos supervisionados de mach
 ## Modelos Implementados
 
 1. **Regressão Linear Simples**: Implementação do modelo de regressão linear simples usando gradiente descendente.
+2. **Regressão Logística**: Implementação do modelo de regressão logística usando gradiente descendente.
 
