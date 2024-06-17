@@ -2,22 +2,19 @@ import numpy as np
 
 
 def sigmoid(z):
-    """
-    Compute the sigmoid of z.
-    """
     return 1 / (1 + np.exp(-z))
 
 
 def compute_cost(X, y, w, b):
     """
-    Computes the cost function (cross entropy) for logistic regression.
+     Computes the cost function (cross entropy) for logistic regression.
     Args:
-      X (numpy.ndarray): data, m examples with n features
+      X (numpy.ndarray): Data, m examples with n features
       y (numpy.ndarray) : target values
       w (numpy.ndarray) : model parameters
       b (float)       : model parameter
     Returns:
-      total_cost (float): cost
+      cost (float): cost
     """
     m = X.shape[0]
     cost = 0.0
